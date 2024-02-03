@@ -1,0 +1,169 @@
+:root{
+    margin: 0;
+    padding: 0;
+    --background-color: #f4f4f4;
+    --font-dark: #333;
+    --font-white: #fff;
+    --font-titles:'Cormorant Garamond','Open Sans'; 
+    --font-text: 'Open Sans', sans-serif;
+    --secondary-color-text: #a8a8a8;
+}
+
+body{
+    font-family: var(--font-text);
+    background-color: var(--background-color);
+    color: var(--font-dark);
+    margin: 0;
+    padding: 0;
+}
+
+
+img{
+    width: 100px;
+    height: 100px;
+    color: black;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    position: fixed;
+    background-color: var(--background-color);
+    width: 100%;
+    z-index: 100;
+    top: 0%;
+    min-height: 15%;
+}
+
+.header__logo{
+    width: 10rem;
+}
+
+.header__button{
+    display: flex;
+    align-items: right;
+    padding-left: 5rem;
+    background-color: transparent;
+    border: none;
+    
+}
+
+
+.header__icon{
+    width: 1.5rem;
+    
+}
+
+.welcome{
+    background-image: url(./assets/images/sky-wedding.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    place-items: center;
+    max-width: 100%;
+}
+
+.welcome__cover{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    z-index: 10;
+}
+.welcome__title{
+    z-index: 50;
+    position: relative;
+    color: var(--font-white);
+    font-size: 3rem;
+    text-align: center;
+    font-size: 2rem;
+    font-family: var(--font-titles);
+    top: 50%;
+}
+
+.container__bg-blue{
+    background-color: rgb(79, 137, 160);
+    font-family: var(--font-text);
+    color: var(--font-white);
+    padding:.5rem;
+    text-align: center;
+    z-index: 300; 
+}
+
+.container__text{
+    font-family: var(--font-text);
+    color: var(--font-white);;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    bottom: 0;
+    margin: 3rem 0;
+}
+
+.cards{
+    display: block;
+    margin: 0 ;
+    padding: .2rem .1rem;
+    
+}
+
+.card{
+    display: grid;
+    place-items: center;
+    background-color: var(--background-color);
+    /* border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    padding: .5rem;
+    margin: .8rem 0;
+    text-align: center;
+    transition: all 0.3s ease;
+    width: 95vw;
+}
+.card__img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    margin: 0;
+    padding: 0;
+}
+.card__legend{
+    font-family: var(--font-text);
+    font-size: .8rem;
+    color: var(--secondary-color-text);
+    margin: .5rem 0;
+    padding: 0;
+    text-align: center;
+}
+.card__title{
+    font-family: var(--font-titles);
+    font-size: 1.5rem;
+    color: var(--font-dark);
+    margin: .5rem 0;
+    padding: 0;
+    text-align: left;
+}
+.card__text{
+    font-family: var(--font-text);
+    font-size: 1rem;
+    color: var(--font-dark);
+    margin: .5rem 0;
+    padding: 0;
+    text-align: justify;
+}
+
+.moonweed{
+    background-image: url(./assets/images/full_moon.jpg);
+    color: var(--font-white);
+    padding: 1rem;
+    display: grid;
+    place-items: center;
+}
+
