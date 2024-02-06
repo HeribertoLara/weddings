@@ -7,6 +7,7 @@
     --font-titles:'Cormorant Garamond','Open Sans'; 
     --font-text: 'Open Sans', sans-serif;
     --secondary-color-text: #a8a8a8;
+    --button-color:tomato;
 }
 
 body{
@@ -15,6 +16,10 @@ body{
     color: var(--font-dark);
     margin: 0;
     padding: 0;
+}
+
+.card__title, .wedding__title, .welcome__title, .moonweed__title, .container__bg-blue{
+    font-family: var(--font-titles);
 }
 
 
@@ -165,5 +170,221 @@ img{
     padding: 1rem;
     display: grid;
     place-items: center;
+    position: relative;
 }
 
+.moonweed__container, .moonweed__action{
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+
+
+
+.moonweed__title{
+    font-size: 1.8rem;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.moonweed__text{
+    font-size: 1.2rem;
+    text-align: justify;
+    margin: 1rem 0;
+}
+
+.moonweed__action{
+
+    background-image: url(./assets/images/full_moon.jpg);
+    color: var(--font-white);
+    padding: 1rem;
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+.moonweed__container,
+.moonweed__action {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    height: 100%;
+   
+}
+
+.moonweed__button, .contact__button{
+    background-color: var(--button-color);
+    color: var(--font-white);
+    padding: 1rem 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 1rem 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.moonweed__button:hover, .contact__button:hover{
+    background-color: #b11f1f;
+}
+
+/* section phrase */
+
+.phrase{
+    background-color: var(--background-color);
+    padding: 1rem;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.phrase__title{
+    font-size: 1.5rem;
+    font-family: var(--font-titles);
+    color: var(--font-dark);
+    margin: 1rem 0;
+    font-weight: bolder;
+}
+
+.prase__text{
+    font-size: 1rem;
+    font-family: var(--font-text);
+    color: var(--font-dark);
+    margin: 1rem 0;
+    text-align: justify;
+}
+
+.contact{
+    background-color: var(--background-color);
+    padding: 1rem;
+    text-align: left;
+    margin: 1rem 0;
+}
+
+.contact__title{
+    font-size: 1.5rem;
+    font-family: var(--font-titles);
+    color: var(--font-dark);
+    margin: 1rem 0;
+    font-weight: bolder;
+}
+.contact__form{
+    display: grid;
+    grid-template-columns: 1fr ;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.contact__form article{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.contact__label{
+    font-size: .5rem;
+    font-family: var(--font-text);
+    color: var(--font-dark);
+    margin: .5rem 0;
+    text-align: left;
+}
+
+.contact__input, .contact__select{
+    font-size: 1rem;
+    font-family: var(--font-text);
+    color: var(--font-dark);
+    margin:  0;
+    padding: .5rem;
+    border-radius: 5px;
+    border: 1px solid var(--secondary-color-text);
+    outline: none;
+}
+
+.contact__input:focus{
+    border: 1px solid var(--font-dark);
+}
+.contact__select:focus{
+    border: 1px solid var(--font-dark);
+}
+
+.contact__form .contact__planner{
+    display: flex;
+    place-items: center;
+}
+
+.contact__checkbox{
+    /* Add your styles for the checkbox here */
+    display: flex;
+    width: 20px;
+    height: 20px;
+    background-color: var(--button-color);
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+
+}
+
+.contact__checkbox:checked{
+    background-color: var(--font-dark);
+}
+
+.contact__button{
+    background-color: var(--button-color);
+    color: var(--font-white);
+    padding: 1rem 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 1rem 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* section love stories */
+
+.stories{
+    background-image: url(./assets/images/champagne.webp);
+    background-size: cover;
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+
+.stories__cover{
+    background-color: rgba(0, 0, 0, 0.5);
+    
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.stories__title{
+    font-size: 1.5rem;
+    font-family: var(--font-titles);
+    color: var(--font-white);
+    margin: 1rem 0;
+    font-weight: bolder;
+}
+
+.stories__text{
+    font-size: 1rem;
+    font-family: var(--font-text);
+    color: var(--font-white);
+    margin: 1rem 0;
+    text-align: justify;
+   
+}
