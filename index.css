@@ -1,7 +1,8 @@
 :root{
     margin: 0;
     padding: 0;
-    --background-color: #f4f4f4;
+    --background-color: #fff;
+    --backgrund-color-dark: #1a173b;
     --font-dark: #333;
     --font-white: #fff;
     --font-titles:'Cormorant Garamond','Open Sans'; 
@@ -139,7 +140,7 @@ img{
     margin: 0;
     padding: 0;
 }
-.card__legend{
+.card__legend, .services__icon-title{
     font-family: var(--font-text);
     font-size: .8rem;
     color: var(--secondary-color-text);
@@ -355,21 +356,27 @@ img{
     background-size: cover;
     display: grid;
     place-items: center;
-    padding: 1rem;
+    padding: 1rem 0;
     text-align: center;
     margin: 1rem 0;
+    width: 100%;
 }
+
 
 
 .stories__cover{
     background-color: rgba(0, 0, 0, 0.5);
     
-    padding: 1rem;
+    padding: 1rem 0;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
     height: 100%;
     text-align: center;
+}
+
+.stories__content{
+    padding: 1rem;
 }
 
 .stories__title{
@@ -387,4 +394,170 @@ img{
     margin: 1rem 0;
     text-align: justify;
    
+   
+}
+
+/* carousel de imagenes */
+.carousel{
+    width: 100vw;
+}
+
+.carousel__container{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: scroll;
+    max-width: 100%;
+    right: 0;
+    padding: 1rem  ;
+    /* 
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-points-x: repeat(300px);
+    scroll-snap-type: mandatory;
+    width: 100%;
+    height: 300px; */
+    
+}
+
+.carousel__image {
+    flex: 1 0 auto;
+    width: 90vw;
+    height: 300px;
+    margin: 0 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.carousel__image:hover{
+    transform: scale(1.1);
+} 
+/* section services */
+
+.services{
+    background-color: var(--background-color);
+    padding: 1rem;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.services__icons{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+}
+
+.services__icon{
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+    margin: 0;
+    border-radius: 1px;
+    border: solid .01rem var(--secondary-color-text);    
+    transition: all 0.3s ease;
+}
+
+
+.services__icon-title{
+    font-size: .8rem;
+  
+}
+
+/* section contact phone */
+
+.contact {
+    display: grid;
+    background-image: url(./assets/images/pedida_mano.jpeg);
+    background-size: cover;
+    padding: 0;
+    max-width: 100%;
+
+}
+
+.contact__cover{
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    height: 94%;
+    text-align: center;
+}
+
+.contact__title{
+    font-size: 1.8rem;
+    font-family: var(--font-titles);
+    color: var(--font-white);
+    margin: 1rem 0;
+    font-weight: bolder;
+}
+
+.contact__location{
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+}
+
+.contact__location hr{
+    border: 1px solid var(--font-white);
+    width: 80%;
+    margin: 1rem auto;
+}
+.contact__text{
+    font-size: 1rem;
+    font-family: var(--font-text);
+    color: var(--font-white);
+    margin: 1rem 0;
+    text-align: justify;
+}
+
+
+.contact__country p, .contact__phone p{
+    font-size: 1.1rem;
+    font-family: var(--font-text);
+    color: var(--font-white);
+    margin: 1.2rem 0;
+    text-align: center;
+
+}
+
+/* footer section */
+
+footer {
+    display: grid;
+    place-items: center;
+    background-color: var(--font-dark);
+    padding: 1rem;
+    text-align: center;
+    margin:-1rem  0;
+}
+
+.footer__img{
+    width: 10rem;
+    height: 100px;
+    color: var(--font-white);
+    filter: invert(1);
+}
+
+.footer hr{
+    border: 1px solid var(--font-white);
+    width: 80%;
+    margin: 1rem auto;
+}
+
+.fa-brands{
+    font-size: 2rem;
+    color: var(--font-white);
+    margin: 0 1rem;
+}
+
+.footer__text{
+    font-size: 1rem;
+    font-family: var(--font-text);
+    color: var(--font-white);
+    margin: 1rem 0;
+    text-align: center;
 }
