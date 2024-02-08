@@ -65,6 +65,9 @@ img{
     background-image: url(./assets/images/sky-wedding.jpg);
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+   
+    background-attachment: fixed ;
     height: 100vh;
     display: flex;
     place-items: center;
@@ -73,7 +76,7 @@ img{
 
 .welcome__cover{
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
     width: 100%;
     height: 100%;
     display: grid;
@@ -165,8 +168,33 @@ img{
     text-align: justify;
 }
 
+/* card responsive section  */
+@media (min-width: 768px){
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        place-items: center;
+        margin-bottom: 5rem;
+    }
+    .card{
+        width: 100%;    
+        margin: 1rem;
+        max-width: 20rem;
+        height:20rem;
+        transition: all 0.3s ease;
+    }
+    .card:hover{
+        transform: scale(1.1);
+    }
+}
+
+/*modal section */
 .moonweed{
     background-image: url(./assets/images/full_moon.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center ;
+    background-attachment: fixed ;
     color: var(--font-white);
     padding: 1rem;
     display: grid;
@@ -208,14 +236,12 @@ img{
     position: relative;
 }
 
-.moonweed__container,
-.moonweed__action {
+.moonweed__container  {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 1rem;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 800px;
     text-align: center;
     height: 100%;
    
@@ -262,7 +288,7 @@ img{
     margin: 1rem 0;
     text-align: justify;
 }
-
+/*  section form contact */
 .contact{
     background-color: var(--background-color);
     padding: 1rem;
@@ -272,6 +298,7 @@ img{
 
 .contact__title{
     font-size: 1.5rem;
+    text-align: center;
     font-family: var(--font-titles);
     color: var(--font-dark);
     margin: 1rem 0;
@@ -348,6 +375,32 @@ img{
     cursor: pointer;
     transition: all 0.3s ease;
 }
+/* contact form responsive */
+@media (min-width: 768px){
+    .contact__form{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        margin: 1rem 0;
+    }
+    .contact__form article{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .contact__planner{
+        margin-top: 1rem;
+        display: flex;
+        place-items: center;
+    }
+    .contact__label{
+        font-size: .8rem;
+        font-family: var(--font-text);
+        color: var(--font-dark);
+        margin: .5rem 0;
+        text-align: left;
+    }
+}
+
 
 /* section love stories */
 
@@ -408,17 +461,7 @@ img{
     overflow: scroll;
     max-width: 100%;
     right: 0;
-    padding: 1rem  ;
-    /* 
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-    scroll-snap-points-x: repeat(300px);
-    scroll-snap-type: mandatory;
-    width: 100%;
-    height: 300px; */
-    
+    padding: 1rem; 
 }
 
 .carousel__image {
@@ -436,6 +479,50 @@ img{
 .carousel__image:hover{
     transform: scale(1.1);
 } 
+/*  carousel desktop */
+@media (min-width: 768px){
+    .stories__cover{
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 1rem 0;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 96%;
+        height: 100%;
+        text-align: center;
+    }
+    .carousel{
+        width: 95vw;
+    }
+    .carousel__container{
+        display: flex;
+        flex-wrap: nowrap;
+        overflow: scroll;
+        scrollbar-width: thin;
+        scrollbar-color: transparent transparent;
+        max-width: 7%;
+        right: 0;
+        padding: 1rem; 
+    }
+
+    .carousel__image {
+        flex: 1 0 auto;
+        width: 20rem;
+        height: 300px;
+        margin: 0 1rem;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        transition: all 0.3s ease;
+    }
+    .carousel__image:hover{
+        transform: scale(1.1);
+    }
+  
+}
+
+
+
 /* section services */
 
 .services{
@@ -466,10 +553,30 @@ img{
     font-size: .8rem;
   
 }
+/* services desktop */
+@media (min-width: 768px){
+    .services__icons{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1rem;
+    }
+    .services__icon{
+        display: grid;
+        place-items: center;
+        padding: 1rem;
+        margin: 0;
+        border-radius: 1px;
+        border: solid .01rem var(--secondary-color-text);    
+        transition: all 0.3s ease;
+    }
+    .services__icon:hover{
+        transform: scale(1.1);
+    }
+}
 
 /* section contact phone */
 
-.contact {
+.phone {
     display: grid;
     background-image: url(./assets/images/pedida_mano.jpeg);
     background-size: cover;
@@ -478,7 +585,7 @@ img{
 
 }
 
-.contact__cover{
+.phone__cover{
     background-color: rgba(0, 0, 0, 0.5);
     padding: 1rem;
     
@@ -488,25 +595,26 @@ img{
     text-align: center;
 }
 
-.contact__title{
+.phone__title{
     font-size: 1.8rem;
     font-family: var(--font-titles);
     color: var(--font-white);
+    text-align: center;
     margin: 1rem 0;
     font-weight: bolder;
 }
 
-.contact__location{
+.phone__location{
     background-color: rgba(0, 0, 0, 0.5);
     padding: 1rem;
 }
 
-.contact__location hr{
+.phone__location hr{
     border: 1px solid var(--font-white);
     width: 80%;
     margin: 1rem auto;
 }
-.contact__text{
+.phone__text{
     font-size: 1rem;
     font-family: var(--font-text);
     color: var(--font-white);
@@ -515,7 +623,7 @@ img{
 }
 
 
-.contact__country p, .contact__phone p{
+.phone__country p, .phone__number p{
     font-size: 1.1rem;
     font-family: var(--font-text);
     color: var(--font-white);
@@ -560,4 +668,22 @@ footer {
     color: var(--font-white);
     margin: 1rem 0;
     text-align: center;
+}
+.footer__social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.footer__social-link{
+    font-size: 1.5rem;
+    color: var(--font-white);
+    margin: 0 1rem;
+    transition: all 0.3s ease;
+}
+
+.footer__social-icon{
+    filter: invert(1);
+    width: 1.5rem;
 }
