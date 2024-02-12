@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     --background-color: #fff;
-    --backgrund-color-dark: #1a173b;
+    --backgrund-color-dark: #222225;
     --font-dark: #333;
     --font-white: #fff;
     --font-titles:'Cormorant Garamond','Open Sans'; 
@@ -771,4 +771,10 @@ footer {
 .footer__social-icon{
     filter: invert(1);
     width: 1.5rem;
+}
+
+@media (min-width: 768px){
+   nav{
+    display: flex;
+   }
 }
