@@ -93,59 +93,7 @@ class Header extends HTMLElement {
   getStyles() {
       return `
           <style>
-            header img {
-                width: 10rem;
-                height: 100px;
-            }
-             .menu-toggle {
-                padding: 10px 10px;
-                background: #ffff;
-                border: none;
-                border-radius: 50%;
-                box-shadow: 0 0 5px 0 black;
-                position: fixed;
-                top: 0;
-                right: 0;
-                margin: 1rem;
-                trasicion: all 0.3s ease;
-              }
-            button:active {  
-                transform: scale(0.9);
-                background: #ffff; ;
-                border-radius: 50%;
-                box-shadow: 0 0 5px 0 black;
-                }
-            button span {
-                display: block;
-                width: 30px;
-                height: 5px;
-                background: black;
-                margin: 5px;
-              }
-            nav {
-                place-items: center;
-                background: var(--backgrund-color-dark);
-                height: 100vh;
-                }
-            nav ul {
-                display: grid;
-                place-items: center;
-                height: 33.3%;
-              }
-            nav ul li {
-                margin: 0 1rem;
-                list-style: none;
-                text-decoration: none;
-                top: 0;
-              }
-            nav ul li a {
-                text-decoration: none;
-                color: var(--font-white);
-                font-size: 1rem;
-                font-weight: 600;
-              }
-                
-            }
+            
           </style>
       `;
   }

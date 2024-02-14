@@ -11,24 +11,65 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
         rel="stylesheet">
-  
-    <script src="./components/header-fives.js"></script>
+    <script src="./header.js"></script>
+    
+
+    <!-- script formulario en español -->
+
+    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+
+<script>
+
+  hbspt.forms.create({
+
+    region: "na1",
+
+    portalId: "5943261",
+
+    formId: "d817994d-7f6f-419b-b65d-42c7a495c6f3"
+
+  });
+
+</script>
+
     <title>All senses weedings</title>
+
 </head>
 
 <body>
     <main>
 
-        <section>
-            <header-fives
-                image="./allSensesLogo.png"
-                first="Spanish"
-                second="US / CAN 1 (800)728-7307"
-                third="MEX / REST OF THE WORLD"
-            >
-            </header-fives>
+        <header class="header">
+            <section class="header__section">
+                <img src="./allSensesLogo.png" class="header__image" />
+        
+            </section>
+            <button class="header__button header__button--toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-        </section>
+                <nav class="header__nav">
+                    <ul class="nav__list">
+                        <li class="list__item">
+                            <a href="#" class="item__link">
+                                Spanish
+                            </a>
+                        </li>
+                        <li class="list__item">
+                            <a href="#" class="item__link">
+                                US / CAN 1 (800)728-7307
+                            </a>
+                        </li>
+                        <li class="list__item">
+                            <a href="#" class="item__link">
+                                MEX / REST OF THE WORLD
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+        </header>
         <section class="welcome">
             <div class="welcome__cover">
                 <h1 class="welcome__title">
@@ -116,7 +157,23 @@
 
         <section class="contact">
             <h3 class="contact__title">Personal Information</h3>
-            <form class="contact__form">
+            <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+
+            <script>
+            
+              hbspt.forms.create({
+            
+                region: "na1",
+            
+                portalId: "5943261",
+            
+                formId: "7b4a6ad2-ee1d-472d-a47d-6a74c4c99fb6"
+            
+              });
+          
+            </script>
+
+            <!-- <form class="contact__form">
                 <article>
                     <label for="firstName" class="contact__label">First name*</label>
                     <input type="text" id="firstName" class="contact__input" required>
@@ -165,7 +222,7 @@
                         Send
                     </button>
                 </article>
-            </form>
+            </form> -->
         </section>
         <section class="stories">
             <span class="stories__cover">
@@ -362,10 +419,7 @@
                 >
                 <img src="./assets/icons/social/instagram.svg" alt="#"  class="footer__social-icon">
             </a>
-        </section>
-
-
-         
+        </section> 
          
         <hr/>
         <p class="footer__text">
