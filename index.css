@@ -49,37 +49,6 @@ img{
     color: black;
 }
 
-/* .header {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    place-items: center;
-    position: fixed;
-    background-color: var(--background-color);
-    width: 100%;
-    z-index: 100;
-    top: 0%;
-    min-height: 15%;
-}
-
-.header__logo{
-    width: 10rem;
-}
-
-.header__button{
-    display: flex;
-    align-items: right;
-    padding-left: 5rem;
-    background-color: transparent;
-    border: none;
-    
-}
-
-
-.header__icon{
-    width: 1.5rem;
-    
-}
- */
 .welcome{
     background-image: url(./assets/images/sky-wedding.jpg);
     background-size: cover;
@@ -834,9 +803,7 @@ footer {
     margin: 5px 0;
 }
 
-/* .header__nav{
-    display: block;
-} */
+
 
 .nav__list{
     display: flex;
@@ -896,14 +863,9 @@ footer {
         background-color: var(--background-color);
         margin-top: 0;
     }
-
-
     .nav__list li {
         padding: 10% 0;
     }
-
-
-    
 }
 
 
